@@ -58,29 +58,3 @@ func main() {
 
 	log.Println(protojson.Format(res.Msg.Request))
 }
-
-// function main() {
-//   const client = createPromiseClient(Transformer, transport);
-//
-//   const handler = process.argv[2];
-//
-//   console.log("Compiling code...");
-//   const compile = await client.compileCode({
-//     namespace: "example",
-//     code: fs.readFileSync(handler),
-//   })
-//
-//   const request = JSON.parse(fs.readFileSync("request.json"));
-//
-//   console.log("Transforming event...");
-//   const res = await client.transformEvent({
-//     namespace: "example",
-//     codeId: compile.id,
-//     request: request,
-//     env: {
-//         "TEST": "foo",
-//     },
-//   });
-//
-//   console.log(res);
-// }
